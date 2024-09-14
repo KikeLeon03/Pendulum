@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1726338319",
+        "python_version": "3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\kikel\\Documents\\GitHub\\Pendulum\\venv\\Scripts\\mlagents-learn --resume --run-id=Test1",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.4.1+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1726338341"
+    },
+    "total": 22.495147699999507,
+    "count": 1,
+    "self": 0.06368220000877045,
+    "children": {
+        "run_training.setup": {
+            "total": 0.07060099999944214,
+            "count": 1,
+            "self": 0.07060099999944214
+        },
+        "TrainerController.start_learning": {
+            "total": 22.360864499991294,
+            "count": 1,
+            "self": 0.0002412999892840162,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 22.360603799999808,
+                    "count": 1,
+                    "self": 22.360603799999808
+                },
+                "TrainerController._save_models": {
+                    "total": 1.9400002202019095e-05,
+                    "count": 1,
+                    "self": 1.9400002202019095e-05
+                }
+            }
+        }
+    }
+}

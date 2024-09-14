@@ -723,6 +723,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537346288}
   m_CullTransparentMesh: 1
+--- !u!1 &580105219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580105221}
+  - component: {fileID: 580105220}
+  m_Layer: 0
+  m_Name: SantaClaus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &580105220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580105219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d31a751436f2cc478026d22cddf2d84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballTrasform: {fileID: 1839960037}
+  agent: {fileID: 636533128}
+  rewardFrameStep: 5
+--- !u!4 &580105221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580105219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.0975463, y: -9.218615, z: 2.0555687}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636533123
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +906,8 @@ MonoBehaviour:
   MaxStep: 0
   ballTransform: {fileID: 1839960037}
   XAxisMovement: {fileID: 636533127}
+  cylinderTransform: {fileID: 385587784}
+  ballRB: {fileID: 1839960041}
 --- !u!114 &636533129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -872,8 +921,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 4
-    NumStackedVectorObservations: 4
+    VectorObservationSize: 5
+    NumStackedVectorObservations: 30
     m_ActionSpec:
       m_NumContinuousActions: 0
       BranchSizes: 03000000
@@ -1769,7 +1818,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 1
-  m_PreviewTimeScale: 0.2
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -2186,3 +2235,4 @@ SceneRoots:
   - {fileID: 736216122}
   - {fileID: 989355654}
   - {fileID: 1155403429}
+  - {fileID: 580105221}
