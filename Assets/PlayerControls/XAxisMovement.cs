@@ -13,6 +13,8 @@ public class XAxisMovement : MonoBehaviour
 
     public float limitPos = 30;
 
+    public bool IgnoreAgentOrders = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,7 +28,9 @@ public class XAxisMovement : MonoBehaviour
         
         // Add player and agent velocity orders
         rb.velocity = new Vector3(horizontalMovement * speed, 0, 0);
-        rb.velocity += agentVelocityOrder;
+        
+        if (!IgnoreAgentOrders ) { rb.velocity += agentVelocityOrder; }
+       
 
         // Stage limits
         if ((transform.position.x < -limitPos && rb.velocity.x < 0) || (transform.position.x > limitPos && rb.velocity.x > 0)){
@@ -46,6 +50,11 @@ public class XAxisMovement : MonoBehaviour
     }
     public void AgentVelocityOrder(int order)
     {
-        agentVelocityOrder = new Vector3(speed * order,0,0);
+            agentVelocityOrder = new Vector3(speed * order, 0, 0);
+    }
+    public void ToggleActiveAgent()
+    {
+        IgnoreAgentOrders = !IgnoreAgentOrders;
+        rb.velocity = new Vector3(0, 0, 0);
     }
 }

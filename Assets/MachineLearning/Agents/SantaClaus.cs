@@ -27,7 +27,6 @@ public class SantaClaus : MonoBehaviour
     }
     public void giveAgentBallReward()
     {
-        float rw = 0;
         if(ballTrasform.localPosition.y < 0) { agent.AddReward(ballTrasform.localPosition.y); }
         else { agent.AddReward(Mathf.Pow(ballTrasform.localPosition.y - boundReward, expReward)); }
     }
